@@ -1,0 +1,1 @@
+export const BASE_PREFIX = 'https://brainstorm-interview-task.herokuapp.com';

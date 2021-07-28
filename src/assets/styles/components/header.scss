@@ -1,0 +1,93 @@
+header {
+  position: fixed;
+  background-color: white;
+  border-bottom: 1px solid #E9E9E9;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 6.6%;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+
+  .headerWrapper {
+    width: 100%;
+    height: 100%;
+    padding-left: 15%;
+    padding-right: 1.8%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .searchIcon, .notificationIcon {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 0 .9%;
+      cursor: pointer;
+      transition: background-color .5s ease;
+
+      &:hover {
+        background-color: #D8D8D8;
+      }
+
+      svg {
+        width: 1vw;
+      }
+    }
+
+    .notificationIcon {
+      position: relative;
+
+      &Count {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        right: 0;
+        transform: translate(-5%, 50%);
+        height: 1.2vw;
+        padding: 0 1px;
+        min-width: 1vw;
+        font-size: .7vw;
+        background-color: $softBlue;
+        color: white;
+        border-radius: 50%;
+      }
+    }
+
+    .userAvatar {
+      margin-left: 1.6%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 1%;
+      cursor: pointer;
+
+      &Image {
+        width: 2.1vw;
+        height: 2vw;
+        background-color: #D8D8D8;
+        border-radius: 50%;
+        position: relative;
+      }
+
+      &.active {
+        .userAvatarImage {
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: #7BD500;
+            border: 1px solid white;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}

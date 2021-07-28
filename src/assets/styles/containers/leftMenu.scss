@@ -1,0 +1,35 @@
+.leftMenu {
+  background-color: $leftMenuColor;
+  position: fixed;
+  width: 12.5%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 5.5%;
+  z-index: 2;
+
+  &Link {
+    color: rgba(white, 0.4);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 4.5% 14%;
+    font-size: .8vw;
+
+    svg {
+      opacity: 0.4;
+      width: 1vw;
+      height: 1.1vw;
+      margin-right: 1rem;
+    }
+
+    &.active {
+      svg {
+        opacity: 1;
+      }
+
+      background-color: #1F2430;
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+* {
+  font-family: $roboto;
+}
+
+.mainContainer {
+  padding-left: 15%;
+  padding-top: 4.6%;
+  padding-right: 2.5%;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 50000s 50000s;
+}
+
+.buttonBlue {
+  width: max-content;
+  color: white;
+  background-color: $softBlue;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-size: .65vw;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+.main {
+  position: relative;
+}
