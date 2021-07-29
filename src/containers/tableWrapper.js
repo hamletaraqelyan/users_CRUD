@@ -77,7 +77,6 @@ const TableWrapper = () => {
     ];
 
     const handleDisableUser = (id, state) => {
-        console.log(state);
         axios.patch(`${BASE_PREFIX}/users/${id}`, {disabled: state})
             .then(res => {
                 console.log(res);
@@ -98,7 +97,6 @@ const TableWrapper = () => {
         setLoading(true);
         axios.get(`${BASE_PREFIX}/users?_page=${page}&_limit=${limit}${sortBy ? `&_sort=${sortBy}` : ''}${orderBy ? `&_order=${orderBy}` : ''}`)
             .then(response => {
-                console.log(response);
                 if (response.statusText === "OK") {
                     const count = response.headers['x-total-count'];
                     if (response.data.length !== 0) {
@@ -125,10 +123,6 @@ const TableWrapper = () => {
     useLayoutEffect(() => {
         getUsers(activePage, perPage, activeSort.key, activeSort.order);
     }, [activePage, perPage, activeSort]);
-
-    // const handleChange = (state) => {
-    //     console.log('Selected Rows: ', state.selectedRows);
-    // };
 
     const handleSort = (column, sortDirection) => {
         const sortConfig = {

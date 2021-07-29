@@ -25,7 +25,6 @@ const PaginationComponent = ({rowsPerPage, rowCount, onChangePage, onChangeRowsP
 
     useEffect(() => {
         const currentOption = options.find(opt => opt.value === rowsPerPage);
-        console.log(currentOption);
         setSelectedOption(currentOption);
     }, [rowsPerPage])
 
